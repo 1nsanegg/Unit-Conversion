@@ -51,6 +51,10 @@ function reWriteMassEl(input) {
 
 convertBtn.addEventListener("click", function () {
   let inputValue = inputEL.value;
+  if (isNaN(inputValue) | (inputValue < 0)) {
+    alert("Please enter a valid number that greater than 0!");
+    return;
+  }
   rewriteLengthEl(inputValue);
   reWriteVolumeEl(inputValue);
   reWriteMassEl(inputValue);
